@@ -1,0 +1,17 @@
+<!--pages/home.wxml-->
+<view class="home_all">
+  <view id="header" class="tab_all">
+    <view class="tab-item  {{rec.idx==tabidx?'tbi-cur':''}}" bindtap="switchtab" data-t="0">
+      <text class="tab-text">子系统应用</text>
+    </view>
+    <view class="tab-item  {{playlist.idx==tabidx?'tbi-cur':''}}" bindtap="switchtab" data-t="1">
+      <text class="tab-text">综合管理</text>
+    </view>
+    <view class="tab-item  {{djlist.idx==tabidx?'tbi-cur':''}}" bindtap="switchtab" data-t="2">
+      <text class="tab-text">维护与管理</text>
+    </view>
+    <navigator url="../search/index" class="tab-search" id="lastsearch">
+      <icon type="search" size="18" color="#666" />
+    </navigator>
+  </view>
+</view>

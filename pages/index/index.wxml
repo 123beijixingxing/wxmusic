@@ -7,7 +7,8 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
+  <view class="usermotto" bindtap="tabclick">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <mp-dialog title="网易云音乐首页" show="{{diaogshow}}" bindbuttontap="tabclicks" buttons="{{[{text: '取消'}, {text: '确认'}]}}"></mp-dialog>
 </view>

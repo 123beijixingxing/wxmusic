@@ -1,0 +1,89 @@
+/* pages/login/login.wxss */
+/* pages/demo2/demo2.wxss */
+page {
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 24rpx;
+  line-height: 150%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0099ee;
+  align-items: stretch;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/*授权页面模版1--start*/
+.login_dialog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.login_boder {
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_userimg {
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  background-size: cover;
+}
+.login_username {
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  color: #9d9d9d;
+}
+.aply_text {
+  font-size: 32rpx;
+  color: black;
+  text-align: left;
+  padding-bottom: 30rpx;
+}
+.aply_detail_content {
+  font-size: 32rpx;
+  text-align: left;
+  color: #9d9d9d;
+}
+.confirm-btn {
+  font-size: 13pt;
+  line-height: 85rpx;
+  height: 85rpx;
+  background: #0099ee;
+  color: #fff;
+  text-align: center;
+  border-radius: 100rpx;
+  margin: 40% 20%;
+}
+.confirm-btn text {
+  color: #fff;
+  font-size: 35rpx;
+}
+.confirm-btn:active {
+  opacity: 0.8;
+}
+.copyright {
+  font-size: 28rpx;
+  color: #999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  text-align: center;
+}
+/*授权页面模版1--end*/

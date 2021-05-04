@@ -1,13 +1,17 @@
 //index.js
-//获取应用实例
-const app = getApp()
+const app = getApp(); // 获取到小程序全局唯一的app实例
+const fetch = require("../../utils/request/request"); // 引入封装的请求API
+const asyncfc = require("../../utils/async/async"); // 引入异步同步请求封装，https://github.com/caolan/async
+const notification = require("../../utils/notification/notification"); // 引入通知广播，https://github.com/icindy/WxNotificationCenter
+const toast = require("../../utils/requesttoast/requesttoast"); // 引入现实消息提示
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '网易云音乐',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    diaogshow: false,
   },
   //事件处理函数
   bindViewTap: function() {
@@ -15,6 +19,21 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 网易云音乐文字按钮
+  tabclick(event) {
+    this.setData({
+      diaogshow: true,
+    });
+    console.log('网易云音乐文字按钮', event);
+  },
+  // dialog组件按钮点击事件
+  tabclicks(item) {
+    this.setData({
+      diaogshow: false,
+    });
+    console.log('dialog组件按钮点击事件', item);
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -50,5 +69,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

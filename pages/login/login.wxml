@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <login-dialog 
+    show="{{loginshow}}" class="login_dialog" title="{{loginInfo.title}}" mask-closable="{{false}}" 
+    buttons="{{buttonsinfo}}" bindbuttontap="logcancom">
+    <view class="login_boder">
+      <view class='login_userimg' style="background-image:url('{{loginInfo.logImage}}')"></view>
+      <view class='login_username'>{{loginInfo.logName}}</view>
+    </view>
+    <view class="aply_text">申请获取以下权限</view>
+    <view class="aply_detail_content">{{loginInfo.content}}</view>
+  </login-dialog>
+</view>

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dayjs": "^1.9.7",
+    "html2canvas": "^1.0.0-rc.7",
+    "weui": "^2.4.1"
+  }
+}
